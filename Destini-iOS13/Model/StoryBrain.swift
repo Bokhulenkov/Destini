@@ -44,10 +44,9 @@ struct StoryBrain {
         let currentStorie = storiesArray[numberOfStorie]
         
         if userChoice == currentStorie.choice1 {
-            //            проверка на максимальное значение
-            numberOfStorie < (storiesArray.count - 1) ? (numberOfStorie += 1) : (numberOfStorie = 0)
+            numberOfStorie = currentStorie.choice1Destination
         } else if userChoice == currentStorie.choice2 {
-            numberOfStorie = Int.random(in: 0..<(storiesArray.count - 1))
+            numberOfStorie = currentStorie.choice2Destination
         }
     }
     
